@@ -16,15 +16,3 @@ class RegistrationForm(Form):
     ])
     confirm = PasswordField('Repeat Password')
     accept_tos = BooleanField('I accept the TOS', [validators.DataRequired()])
-
-
-    from pydantic import BaseModel
-
-
-    class RegistrationSchema(BaseModel):
-        firstname:str
-        lastname:str
-        other_names:str|None = None
-        email:str
-        phone:int
-        password:str
