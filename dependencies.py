@@ -30,7 +30,6 @@ def findOne(email):
     return filter(lambda x : x.get("username") == found_user,database) \
         if found_user is not None else None
 
-def 
 if __name__ == "__main__":
     response = findOne([{"username":"michael",
         "passsword":"2344"},
